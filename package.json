@@ -1,0 +1,28 @@
+{
+  "name": "cypress-api-test",
+  "version": "1.0.0",
+  "description": "test api with cypress",
+  "main": "index.js",
+  "scripts": {
+    "api_sample_test": "npx cypress run --spec 'cypress/e2e/api-test.cy.js'",
+    "generate_token": "npx cypress run --spec 'cypress/e2e/customerBalance.cy.js'",
+    "customer-kyc": "npx cypress run --spec 'cypress/e2e/customerKyc.cy.js'",
+    "regression-test": "npm run api_sample_test && npm run generate_token && npm run customer-kyc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Olaprog/cypress-api-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Olaprog/cypress-api-test/issues"
+  },
+  "homepage": "https://github.com/Olaprog/cypress-api-test#readme",
+  "devDependencies": {
+    "cypress": "^10.11.0"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.0"
+  }
+}
